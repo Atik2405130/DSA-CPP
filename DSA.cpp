@@ -37,23 +37,61 @@
 //     cout<<arr[imax]<<arr[ismax]<<endl;
 // }
 
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// int main()
+// {
+//     vector<int>vec;//0
+//     //vec.push_back(25);
+//     //cout<<"size= "<<vec.size()<<endl;
+//     vec.push_back(0);//Insert Value
+//     vec.push_back(1);
+//     vec.push_back(2);
+//     vec.push_back(3);
+//     vec.push_back(4);//Capacity doubled in each case not size(elements)
+//     cout<<"size = "<<vec.size()<<endl;
+//     cout<<vec.capacity()<<endl;// Capacity 
+//     //vec.pop_back();//delete element from the last
+//     //for(int val:vec){
+//     //cout<<val<<endl;
+//     //}
+// }
+
 #include<iostream>
 #include<vector>
 using namespace std;
 int main()
 {
-    vector<int>vec;//0
-    //vec.push_back(25);
-    //cout<<"size= "<<vec.size()<<endl;
-    vec.push_back(0);//Insert Value
-    vec.push_back(1);
-    vec.push_back(2);
-    vec.push_back(3);
-    vec.push_back(4);//Capacity doubled in each case not size(elements)
-    cout<<"size = "<<vec.size()<<endl;
-    cout<<vec.capacity()<<endl;// Capacity 
-    //vec.pop_back();//delete element from the last
-    //for(int val:vec){
-    //cout<<val<<endl;
-    //}
+    int arr[5]={1,2,3,4,5};
+    int maxsum=0;
+    for(int start=0;start<5;start++)
+    {
+        int cursum=0;
+        for(int end=start;end<5;end++)
+        {
+            cursum+=arr[end];
+            maxsum=max(maxsum,cursum);
+        }
+    }
+    cout<<maxsum;
 }
+//Kadans algorithm
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+    int cursum=0;
+    int maxsum=INT_MIN;
+    vector<int>vec;
+    for(int value:vec)
+    {
+        cursum+=value;
+        if(cursum<0)
+        {
+            cursum=0;
+        }    
+        maxsum=max(maxsum,cursum);
+    }
+}    
