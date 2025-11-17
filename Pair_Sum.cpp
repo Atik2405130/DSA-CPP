@@ -1,3 +1,4 @@
+//Only applicable in the sorted array
 #include<iostream>
 #include<vector>
 using namespace std;
