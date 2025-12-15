@@ -57,6 +57,7 @@
 //     //cout<<val<<endl;
 //     //}
 // }
+<<<<<<< HEAD
 // #include<iostream>
 // #include<vector>
 // using namespace std;
@@ -97,3 +98,43 @@
 //     }
 //     cout<<"max subarray sum = "<<maxSum<<endl;
 // }
+=======
+
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+    int arr[5]={1,2,3,4,5};
+    int maxsum=0;
+    for(int start=0;start<5;start++)
+    {
+        int cursum=0;
+        for(int end=start;end<5;end++)
+        {
+            cursum+=arr[end];
+            maxsum=max(maxsum,cursum);
+        }
+    }
+    cout<<maxsum;
+}
+//Kadans algorithm
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+    int cursum=0;
+    int maxsum=INT_MIN;
+    vector<int>vec;
+    for(int value:vec)
+    {
+        cursum+=value;
+        if(cursum<0)
+        {
+            cursum=0;
+        }    
+        maxsum=max(maxsum,cursum);
+    }
+}    
+>>>>>>> fab1da80942473717e3ea54278087924c599ae51
