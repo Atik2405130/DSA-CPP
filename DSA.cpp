@@ -57,6 +57,48 @@
 //     //cout<<val<<endl;
 //     //}
 // }
+<<<<<<< HEAD
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// int main()
+// {
+//     int n=5;
+//     int arr[]={1,2,3,4,5};
+//     for(int start=0;start<n;start++)
+//     {
+//         for(int end=start;end<n;end++)
+//         {
+//             for(int i=start;i<=end;i++)
+//             {
+//                 cout<<arr[i];
+//             }
+//             cout<<" ";
+//         }
+//         cout<<endl;
+//     }
+// }
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// int main()
+// {
+//     int n=5;
+//     int arr[5]={1,2,3,4,5};
+//     int maxSum=INT_MIN;
+//     for(int start=0;start<n;start++)
+//     {
+//         int currsum=0;
+//         for(int end=start;end<n;end++)
+//         {
+//             currsum+=arr[end];
+//             maxSum=max(currsum,maxSum);
+//         }
+//     }
+//     cout<<"max subarray sum = "<<maxSum<<endl;
+// }
+=======
 
 #include<iostream>
 #include<vector>
@@ -95,3 +137,4 @@ int main()
         maxsum=max(maxsum,cursum);
     }
 }    
+>>>>>>> fab1da80942473717e3ea54278087924c599ae51
