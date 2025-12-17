@@ -76,6 +76,17 @@ class List
             delete tail;
             tail=temp;
         }
+        void insertMiddle(int value,int pos)
+        {
+            Node *newNode=new Node(value);
+            Node *temp=head;
+            for(int i=0;i<pos-1;i++)
+            {
+                temp=temp->next;
+            }
+            newNode->next=temp->next;
+            temp->next=newNode;
+        }
 };
 
 int main()
@@ -94,5 +105,8 @@ int main()
     ll.printLL();
     ll.pop_back();
      cout<<"After deleting the last element :"<<endl;
+    ll.printLL();
+    ll.insertMiddle(4,2);
+    cout<<"After Insertion :"<<endl;
     ll.printLL();
 }
