@@ -67,6 +67,13 @@ class List
         void pop_back()
         {
             if(head==NULL)return;
+            if(head == tail)  // only one node
+            {
+                delete head;
+                head = tail = NULL;
+                return;
+            }
+
             Node *temp=head;
             while(temp->next!=tail)
             {
@@ -87,6 +94,21 @@ class List
             newNode->next=temp->next;
             temp->next=newNode;
         }
+        int search(int key)
+        {
+            Node *temp=head;
+            int idx=0;
+            while(temp)
+            {
+                if(temp->data==key)return idx;
+                else
+                {
+                    temp=temp->next;
+                    idx++;
+                }
+            }
+            return -1;
+        }
 };
 
 int main()
@@ -104,9 +126,10 @@ int main()
     cout<<"After deleting the first element :"<<endl;
     ll.printLL();
     ll.pop_back();
-     cout<<"After deleting the last element :"<<endl;
+    cout<<"After deleting the last element :"<<endl;
     ll.printLL();
     ll.insertMiddle(4,2);
     cout<<"After Insertion :"<<endl;
     ll.printLL();
+    cout<<"Found at idx : "<<ll.search(4)<<endl;
 }
