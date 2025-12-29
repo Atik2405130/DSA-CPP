@@ -1,7 +1,8 @@
 #include<iostream>
 #include<stack>
 using namespace std;
-
+ // O(n)->Time
+ // O(n)->Space
 class Solution {
 public:
     bool isValid(string s) {
