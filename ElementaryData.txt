@@ -1,0 +1,79 @@
+1. Array (Static Array)
+Benefits:
+
+Fast random access O(1) via index
+
+Memory efficient (contiguous, no pointers overhead)
+
+Excellent cache locality
+
+Simple implementation
+
+Disadvantages:
+
+Fixed size (static arrays) or expensive resizing (dynamic arrays)
+
+Insertion/deletion in middle is O(n) (shifting required)
+
+Wasted space if allocated too large, insufficient if too small
+
+2. Linked List (Singly/Doubly)
+Benefits:
+
+Dynamic size (grows/shrinks as needed)
+
+O(1) insertion/deletion at known position (with pointer)
+
+No shifting needed for insert/delete in middle
+
+Memory allocated as needed
+
+Disadvantages:
+
+No random access O(n) for traversal to position
+
+Extra memory for pointers (overhead per node)
+
+Poor cache performance (nodes scattered in memory)
+
+More complex to implement and debug
+
+3. Stack (LIFO)
+Benefits:
+
+Simple and efficient for LIFO operations
+
+O(1) push/pop operations
+
+Useful for recursion, parsing, undo operations
+
+Can be implemented simply with array or linked list
+
+Disadvantages:
+
+Limited access (only top element accessible)
+
+Not suitable for random access needs
+
+Can overflow (array implementation) or underflow
+
+4. Queue (FIFO)
+Benefits:
+
+Efficient for FIFO processing
+
+O(1) enqueue/dequeue (with proper implementation)
+
+Essential for scheduling, buffering, BFS
+
+Fair ordering (first come first served)
+
+Disadvantages:
+
+Limited access (only front and rear)
+
+Array implementation: circular queue needed to reuse space
+
+Linked list implementation: pointer overhead
+
+Not suitable for random access
