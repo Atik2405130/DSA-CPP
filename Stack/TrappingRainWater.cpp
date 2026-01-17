@@ -1,4 +1,4 @@
-// optimal solution //problem
+// optimal solution //
 #include<iostream>
 #include<vector>
 using namespace std;
