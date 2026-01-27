@@ -16,3 +16,4 @@ using namespace std;
     int rightsum=sumNodes(root->right);
     return leftsum+rightsum+root->val;
   }
+  
