@@ -2,6 +2,7 @@
 using namespace std;
 #include<vector>
 #include<list>
+#include<queue>
 
 class Graph
 {
@@ -16,11 +17,21 @@ class Graph
         l[u].push_back(v);
         l[v].push_back(u); // Undirected Graph;
     }
-    void print(){
-        for(int i=0;i<vertices;i++){
-            cout<<i<<": ";
-            for(int val:l[i]){
-                cout<<val<<" ";
+    void BFS(){
+        vector<bool>status(vertices,false);
+        queue<int>q;
+        q.push(0);
+        status[0]=true;
+        while(q.size()>0){
+            int src=q.front();
+            q.pop();
+            cout<<src<<": ";
+            for(int neighbour:l[src]){
+                if(!status[neighbour]){
+                    cout<<neighbour<<" ";
+                    status[neighbour]=true;
+                    q.push(neighbour);
+                }
             }
             cout<<endl;
         }
@@ -34,5 +45,5 @@ int main(){
     g.add(1,3);
     g.add(2,3);
     g.add(2,4);
-    g.print();
+    g.BFS();
 }
