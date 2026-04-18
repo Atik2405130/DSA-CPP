@@ -12,72 +12,54 @@
 
 ---
 
-## Overview
+## Description
 
-**DSA-CPP** is a topic-wise collection of data structure and algorithm implementations in C++.  
-The repository is structured to help you move from fundamentals to problem-solving with a practical, code-first approach.
+**DSA-CPP** is a structured collection of **Data Structures and Algorithms (DSA)** implementations in **C++**, created for learning, revision, and interview preparation.
 
-It currently includes dedicated sections for:
+The repository is organized in a topic-wise manner so that each concept can be studied separately and revisited easily. It includes foundational and intermediate-level implementations that help build strong problem-solving skills, improve algorithmic thinking, and strengthen core programming fundamentals.
 
-- **Arrays**
-- **Linked Lists**
-- **Stacks**
-- **Queues**
-- **Binary Trees**
-- **Graphs**
-- **Dynamic Programming**
-- **Divide & Conquer**
-- **Topic-wise practice files**
+This repository is useful as:
 
-At the root level, there are also supporting files such as `DSA.cpp`, `x^n.cpp`, and `ElementaryData.txt`, which add to the learning and practice workflow.
+- 📖 a revision guide for exams
+- 💡 a reference for coding interviews
+- 🧠 a practice hub for improving problem-solving ability
+- 🗂️ a topic-wise notebook for organized learning
 
 ---
 
 ## Repository at a Glance
 
-```mermaid
-flowchart TD
-    A[DSA-CPP] --> B[Array]
-    A --> C[LinkedList]
-    A --> D[Stack]
-    A --> E[Queue]
-    A --> F[BinaryTree]
-    A --> G[Graph]
-    A --> H[DynamicProgramming]
-    A --> I[Divide & Conquer]
-    A --> J[Topic_Wise]
-    A --> K[Root-level practice files]
+<table>
+  <tr>
+    <td><b>Language</b></td>
+    <td>C++</td>
+    <td><b>Main Focus</b></td>
+    <td>DSA practice</td>
+  </tr>
+  <tr>
+    <td><b>Style</b></td>
+    <td>Topic-wise</td>
+    <td><b>Use Case</b></td>
+    <td>Learning + revision + interview prep</td>
+  </tr>
+  <tr>
+    <td><b>Core Areas</b></td>
+    <td colspan="3">Arrays • Linked Lists • Stacks • Queues • Binary Trees • Graphs • Dynamic Programming • Divide & Conquer</td>
+  </tr>
+  <tr>
+    <td><b>Extra Files</b></td>
+    <td colspan="3"><code>DSA.cpp</code> • <code>ElementaryData.txt</code> • <code>x^n.cpp</code></td>
+  </tr>
+</table>
 
-    B --> B1[Sorting & array tricks]
-    B --> B2[Two pointers / subarray problems]
-    B --> B3[Classic interview questions]
-
-    C --> C1[Singly linked list]
-    C --> C2[Doubly linked list]
-    C --> C3[Cycle / reverse / merge]
-
-    D --> D1[Expression conversion]
-    D --> D2[Stack applications]
-    D --> D3[Monotonic stack problems]
-
-    E --> E1[Linear queue]
-    E --> E2[Circular queue]
-    E --> E3[Queue using list]
-
-    F --> F1[Traversal & height]
-    F --> F2[LCA / diameter / top view]
-    F --> F3[BST operations]
-
-    G --> G1[BFS / DFS]
-    G --> G2[Cycle detection]
-    G --> G3[Flood fill / islands]
-
-    H --> H1[Classic DP problems]
-    H --> H2[Optimization patterns]
-
-    I --> I1[Recursive splitting]
-    I --> I2[Problem decomposition]
-```
+<p align="center">
+  <img src="https://img.shields.io/badge/Arrays-Ready-0EA5E9?style=flat-square" />
+  <img src="https://img.shields.io/badge/Linked%20List-Ready-8B5CF6?style=flat-square" />
+  <img src="https://img.shields.io/badge/Stack-Ready-F97316?style=flat-square" />
+  <img src="https://img.shields.io/badge/Queue-Ready-14B8A6?style=flat-square" />
+  <img src="https://img.shields.io/badge/Tree-Ready-22C55E?style=flat-square" />
+  <img src="https://img.shields.io/badge/Graph-Ready-6366F1?style=flat-square" />
+</p>
 
 ---
 
@@ -223,40 +205,23 @@ It supports revision by keeping related concepts together.
 
 ## Learning Flow
 
-```mermaid
-mindmap
-  root((DSA-CPP))
-    Arrays
-      traversal
-      sorting
-      subarray patterns
-    Linked Lists
-      pointers
-      reversal
-      merging
-    Stacks
-      conversions
-      monotonic patterns
-      applications
-    Queues
-      array queue
-      linked queue
-      circular queue
-    Trees
-      recursion
-      traversal
-      BST
-    Graphs
-      BFS
-      DFS
-      grid problems
-    DP
-      memoization
-      tabulation
-    Divide & Conquer
-      recursion
-      splitting
-```
+<table>
+  <tr>
+    <td><b>1. Arrays</b><br/>Traversal • sorting • subarray patterns</td>
+    <td><b>2. Linked Lists</b><br/>Pointers • reversal • merging</td>
+    <td><b>3. Stacks</b><br/>Conversions • monotonic patterns • applications</td>
+  </tr>
+  <tr>
+    <td><b>4. Queues</b><br/>Array queue • linked queue • circular queue</td>
+    <td><b>5. Trees</b><br/>Recursion • traversal • BST</td>
+    <td><b>6. Graphs</b><br/>BFS • DFS • grid problems</td>
+  </tr>
+  <tr>
+    <td><b>7. Dynamic Programming</b><br/>Memoization • tabulation</td>
+    <td><b>8. Divide & Conquer</b><br/>Recursion • splitting</td>
+    <td><b>Revision</b><br/>Practice • review • repeat</td>
+  </tr>
+</table>
 
 ---
 
