@@ -1,49 +1,49 @@
-#include<iostream>
+#include <bits/stdc++.h>
 using namespace std;
-#include<vector>
-#include<list>
-#include<queue>
+vector<vector<int>> adj;
+vector<int> color, d, parent;
 
-class Graph
+void BFS(int s)
 {
-    list<int>*l;
-    int vertices;
-    public:
-    Graph(int v){
-        vertices=v;
-        l=new list<int>[vertices];
-    }
-    void add(int u,int v){
-        l[u].push_back(v);
-        l[v].push_back(u); // Undirected Graph;
-    }
-    void BFS(){
-        vector<bool>status(vertices,false);
-        queue<int>q;
-        q.push(0);
-        status[0]=true;
-        while(q.size()>0){
-            int src=q.front();
-            q.pop();
-            cout<<src<<": ";
-            for(int neighbour:l[src]){
-                if(!status[neighbour]){
-                    cout<<neighbour<<" ";
-                    status[neighbour]=true;
-                    q.push(neighbour);
-                }
-            }
-            cout<<endl;
-        }
-    }
-};
+    queue<int> Q;
+    color[s] = 1; // GRAY
+    d[s] = 0;
+    parent[s] = -1;
+    Q.push(s);
+    while (!Q.empty())
+    {
+        int u = Q.front();
+        Q.pop();
 
-int main(){
-    Graph g(5);
-    g.add(0,1);
-    g.add(1,2);
-    g.add(1,3);
-    g.add(2,3);
-    g.add(2,4);
-    g.BFS();
+        for (int v : adj[u])
+        {
+            if (color[v] == 0) // WHITE
+            {
+                color[v] = 1; // GRAY
+                d[v] = d[u] + 1;
+                parent[v] = u;
+                Q.push(v);
+            }
+        }
+        color[u] = 2; // BLACK
+    }
+}
+
+int main()
+{
+    int vertex = 8;
+    adj.resize(vertex);
+    adj[0] = {1, 4};
+    adj[1] = {5, 0};
+    adj[5] = {1, 2, 6};
+    adj[2] = {5, 3};
+    adj[6] = {5, 7};
+    adj[4] = {0};
+    adj[3] = {2};
+    adj[7] = {6};
+    color.assign(vertex, 0);
+    d.assign(vertex, -1);
+    parent.assign(vertex, -1);
+    int source = 1;
+    BFS(source);
 }

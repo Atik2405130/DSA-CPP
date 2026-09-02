@@ -1,47 +1,48 @@
-#include<iostream>
+#include <bits/stdc++.h>
 using namespace std;
-#include<vector>
-#include<list>
-#include<queue>
+vector<vector<int>> adj;
+vector<int> color, d, f, parent;
+int timer;
 
-class Graph
+void DFS_visit(int u)
 {
-    list<int>*l;
-    int vertices;
-    public:
-    Graph(int v){
-        vertices=v;
-        l=new list<int>[vertices];
-    }
-    void add(int u,int v){
-        l[u].push_back(v);
-        l[v].push_back(u); // Undirected Graph;
-    }
-    void DFS_helper(int u,vector<bool>&vis){
-        cout<<u<<" ";
-        vis[u]=true;
-        for(int val:l[u]){
-            if(!vis[val]){
-                DFS_helper(val,vis);
-            }
+    color[u] = 1;   // GRAY
+    d[u] = ++timer; // discovery time
+
+    for (int v : adj[u])
+    {
+        if (color[v] == 0) // WHITE
+        {
+            parent[v] = u;
+            DFS_visit(v); // go deeper
         }
     }
-    void dfs(){
-        vector<bool>vis(vertices,false);
-        int src=0;
-        DFS_helper(src,vis);
-        cout<<endl;
+    color[u] = 2;   // BLACK
+    f[u] = ++timer; // finishing time
+}
+
+int main()
+{
+    int vertex = 8;
+    adj.resize(vertex);
+    adj[0] = {1, 4};
+    adj[1] = {5, 0};
+    adj[5] = {1, 2, 6};
+    adj[2] = {5, 3};
+    adj[6] = {5, 7};
+    adj[4] = {0};
+    adj[3] = {2};
+    adj[7] = {6};
+    color.assign(vertex, 0);
+    d.resize(vertex);
+    f.resize(vertex);
+    parent.assign(vertex, -1);
+    timer = 0;
+    for (int i = 0; i < vertex; i++)
+    {
+        if (color[i] == 0)
+        {
+            DFS_visit(i);
+        }
     }
-};
-
-
-int main(){
-    Graph g(5);
-    g.add(0,1);
-    g.add(1,2);
-    g.add(1,3);
-    //g.add(2,3);
-    g.add(2,4);
-    g.dfs();
-
 }
